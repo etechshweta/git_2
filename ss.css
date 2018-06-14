@@ -1,0 +1,16 @@
+table {
+    border: 1px solid black;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 10%;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+    font-family: sans-serif;
+}
+tr:nth-child(odd) {
+    background-color: #dddddd;
+ }
