@@ -11,15 +11,14 @@ body {
     overflow: hidden;
     background-color:#238da5;
     font-family:  sans-serif;
-    width: 100%;
 }
 
 .navbar a {
     float: left;
-    font-size: 16px;
+    font-size: 14px;
     color: #238da5;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14% 16%;
     text-decoration: none;
 }
 
@@ -29,11 +28,11 @@ body {
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;    
+    font-size: 14px;    
     border: none;
     outline: none;
     color: #281a1a;
-    padding: 14px 24px;
+    padding: 14px 14px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
