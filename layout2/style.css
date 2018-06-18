@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: sans-serif;
+    background: #f1f1f1;
+    margin: 0px;
+   padding-right: 6px;
+}
+
+.blank {
+    text-decoration: none;
+    color: #5d696d;
+    font-size: 75%;
+    font-family: sans-serif;
+}
+.text {
+    text-align: justify;
+    font-family: sans-serif;
+}
+.page{
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 25px;
+
+}
+.page1{
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #404242;
+    margin-left: 25px;
+    margin-bottom: -3%;
+
+
+}
+.space{
+    padding: 15px;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+      padding-left: 16px
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  
+}
+
+.leftcolumn {   
+    float: left;
+    width: 100%;
+    padding-top: 19px;
+    padding: 25px;
+}
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.fakeimg {
+    background-color: #d6d3d3;
+    width: 100%;
+    padding: 20px;
+    height:150px;
+     font-size: 25px;
+    text-align: center;
+    padding-top: 25%;
+    color: #a7a1a1
+
+}
+.button1{
+    border:1px solid #00000047;
+    color: white;
+    background-color: #4f9dd1; 
+    padding: 7px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-family:  sans-serif;
+    border-radius: 5px;
+
+}
+.button2 {
+    border:1px solid #00000047;
+    color: black;
+    padding: 7px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    font-family:  sans-serif;
+    border-radius: 5px;
+
+}
+.card {
+    background-color: white;
+    padding: 3px;
+    margin-top: 20px;
+     border: 1px solid #d4cdcd;
+}
+.card1 {
+    background-color: #eaeae5;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 0px
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    border:0px solid #00000047;
+    color: white;
+    background-color: #4f9dd1; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:  sans-serif;
+    border-radius: 25px;
+
+}
+
+.footer {
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
