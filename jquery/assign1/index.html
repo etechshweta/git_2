@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<link rel="stylesheet" href="css/screen.css">
+	<script src="lib/jquery.js"></script>
+	<script src="dist/jquery.validate.js"></script>
+	<script>
+	$.validator.setDefaults({
+		submitHandler: function() {
+			alert("submitted!");
+		}
+	});
+
+	$().ready(function() {
+		$("#commentForm").validate();
+
+		$("#signupForm").validate({
+			rules: {
+				
+				password: {
+					required: true,
+					minlength: 8
+				},
+				confirm_password: {
+					required: true,
+					minlength: 8,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				topic: {
+					required: "#newsletter:checked",
+					minlength: 2
+				},
+				agree: "required"
+			},
+			messages: {
+				
+				password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				confirm_password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long",
+					equalTo: "Please enter the same password as above"
+				},
+				email: "Please enter a valid email address",
+				agree: "Please accept our policy",
+				
+			}
+		});
+
+		
+
+		
+	});
+	</script>
+
+
+</head>
+<body>
+		<form class="cmxform" id="signupForm" method="get" action="">
+		<fieldset>
+			<h2>Form</h2>
+			<p>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email">
+			</p>
+			<p>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password">
+			</p>
+			<p>
+				<label for="confirm_password">Confirm password</label>
+				<input id="confirm_password" name="confirm_password" type="password">
+			</p>
+			
+			<p>
+				<label for="agree">Please agree to our policy</label>
+				<input type="checkbox" class="checkbox" id="agree" name="agree">
+				
+			</p>
+			
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+
+</body>
+
+
+</html>
