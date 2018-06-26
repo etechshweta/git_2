@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>layout3</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <header class="main">
+      <div class="container">
+        <ul class="navbar" id="navbar">
+          <li><a href="#" class="layout" style="font-size: 17px;">Layout 1</a></li>
+          <li class="sub"><a href="#">About</a></li>
+          <li class="sub"><a href="#">Services</a></li>
+          <li class="sub"><a href="#">Contact</a></li>
+          <li><a href="javascript:void(0);" onclick="myfunction()"><i class="fa fa-bars"></i></a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+
+        
+
+        <div class="content-body">
+         
+
+          <div class="row">
+
+
+            <div class="col-md-4">
+              <div class="grid" >
+                <div class="card" style="    border: 0px solid white;">
+                  <h1 class="heading">Blog Post Title</h1>
+                  <p class="second">by <a href="" style="color: #428bca;    text-decoration: none;">Test</a></p>
+                  <hr style="margin-left:0px;margin-bottom: -3px;">
+                  </div><p style="font-size: 12px;margin: 10px;margin-top: -10px;"> <a href="#" ><i style="color: #1d1919; margin-top: 
+                  5px;" class="fa fa-clock-o" aria-hidden="true"></i></a> on <span class="glyphicon glyphicon-time" ></span> Posted on August 24,2013 at 9:00PM</p>
+                <hr style="margin-left: 10px;margin-right: 5px;">
+          
+          
+            </div>
+              <div class="card" style="    border: 0px solid white;">               
+                <div class="image">
+                  <img src="http://via.placeholder.com/900x300" >
+                </div>
+                <div class="title">
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="maincard">
+                <div class="col-md-2">
+                    
+
+                      <form class="card" style="   background-color: #eee;padding-left: 20px;" action="">
+                        <p class="bold">Blog Search</p>
+                      <input type="search" class="search_1" placeholder="" />
+                      <button type="submit" class="submit_1" value="search"><i style="    vertical-align: 1px;" class="fa fa-search"></i></button>
+                      </form>              
+                  <div class="card" style="   background-color: #eee;padding-left: 20px;">
+                    <p class="bold">Blog categories</p>
+                    <div style="overflow-x:auto;">
+                      <table>
+                        <tr>
+                          <td>Categories Name</td>
+                          <td>Categories Name</td>
+                        </tr>
+                        <tr>
+                          <td>Categories Name</td>
+                          <td>Categories Name</td>
+                        </tr>
+                        <tr>                          
+                          <td>Categories Name</td>
+                          <td>Categories Name</td>
+                        </tr>
+                        <tr>                          
+                          <td>Categories Name</td>
+                          <td>Categories Name</td>
+                        </tr>
+                      </table>
+                    </div> 
+                  </div>
+
+                  <div class="card" style="   background-color: #eee;padding-left: 20px;">
+
+                    <p class="bold">Side Wiget Well</p>
+                    <p style=" font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    
+                  </div>
+                  
+                  </div>
+                  </div>
+
+
+        
+      </div>
+      <hr>
+
+      </div>
+      </div>
+
+      
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright Â© Your Website 2018</p>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      function myfunction(){
+        var x = document.getElementById("navbar");
+        if(x.className === "navbar"){
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+
+     
+
+</body>
+</html>
