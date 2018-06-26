@@ -1,0 +1,18 @@
+
+.button { 
+	border: thin solid black; 
+	height: 20px;     
+	margin: 0 auto;
+	width: 35%; 
+	padding: 5px; 
+	margin-bottom: 15px;  
+	border-radius: 5px; 
+	cursor: pointer;  
+	background-color: lightgray;
+} 
+form{
+                	
+    background-color: grey;
+    width: 50%; margin: 50px auto;
+}
+         
