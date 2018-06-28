@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Add files</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+	<div id='TextBoxesGroup'><h2>Upload file</h2>
+		<div id="TextBoxDiv1">
+			<label>File : </label><input type="text" name="" ><input type='file' id='textbox1' >
+				<select id="sel" value="" ">			        
+				    <option id="op1" value="Primary" selected="selected" >Primary image</option>
+				    <option id="op2" value="Secondry">Secondry image</option>			     
+			    </select>
+			</div>
+		</div>
+
+		<input type='button' value='Add Button' id='addButton'>
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    var counter = 2;		
+   	 $("#addButton").click(function () {
+		if(counter>20){
+            alert("Only 20 textboxes allow");
+            return false;
+	}   
+	
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDiv' + counter );
+                
+	newTextBoxDiv.after().html('<label>File ' +  ' : </label>' +
+	      '<input type="text" name="" ><input type="file" name="textbox' + counter + 
+	      '" id="textbox' + counter + '" value="" >'
+	      +'<select id="sel value="" >'
+	      +'<option id="op1" value="Primary" >'+'Primary Image'+'</option>'
+	      + '<option id="op2" value="Secondry" selected="selected" >'+'Secondry Image' +'</option>'
+	      +'</select >'
+	      
+	      + '&nbsp'+'<button  class="removeButton" value="" onclick="$(this).parent().remove()" id="removeButton"'+ counter  +'>' + "remove" +'</button>'
+	      );
+	                      
+	newTextBoxDiv.appendTo("#TextBoxesGroup");
+				
+	counter++;
+     });
+   });
+</script>
+</html>
