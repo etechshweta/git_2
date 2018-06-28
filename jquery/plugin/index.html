@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment fancybox</title>
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/nivo/themes/default/default.css">
+    <link rel="stylesheet" href="css/nivo/nivo-slider.css">
+    <link rel="stylesheet" href="css/jbzoom/jbzoom-style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox-buttons.js"></script>
+    <script src="js/fancybox/jquery.fancybox-media.js"></script>
+    <script src="js/fancybox/jquery.fancybox-thumbs.js"></script>
+    <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/fancybox/jquery.mousewheel.pack.js"></script>
+    <script src="js/nivo/jquery.nivo.slider.js"></script>
+    <script src="js/nivo/jquery.nivo.slider.pack.js"></script>
+    <script src="js/jbzoom/jqzoom.js"></script>
+
+</head>
+
+<body>
+
+    <div class="fancy">
+        <h1>Fancy Box</h1>
+
+        <a class="fancybox" rel="group" href="img/fancybox/1_b.jpg">
+            <img src="img/fancybox/1_s.jpg" />
+        </a>
+        <a class="fancybox" rel="group" href="img/fancybox/5_b.jpg">
+            <img src="img/fancybox/5_s.jpg" />
+        </a>
+        <a class="fancybox" rel="group" href="img/fancybox/2_b.jpg">
+            <img src="img/fancybox/2_s.jpg" />
+        </a>        
+        <a class="fancybox" rel="group" href="img/fancybox/4_b.jpg">
+            <img src="img/fancybox/4_s.jpg" />
+        </a>
+        <a class="fancybox" rel="group" href="img/fancybox/3_b.jpg">
+            <img src="img/fancybox/3_s.jpg" />
+        </a>
+        
+    </div>
+    <div class="fancy theme-default">
+        <h1>Nivo Slider</h1>
+        <div id="slider" class="nivoSlider">
+            <img src="img/nivo/walle.jpg" data-thumb="img/nivo/walle.jpg" />
+                <img src="img/nivo/toystory.jpg" data-thumb="img/nivo/toystory.jpg" />
+            <img src="img/nivo/nemo.jpg" data-thumb="img/nivo/nemo.jpg" />
+            <img src="img/nivo/up.jpg" data-thumb="img/nivo/up.jpg" />
+
+        </div>
+    </div>
+    <div class="fancy">
+        <h1>JBZoom</h1>
+
+        <ul id="jbzoom">
+            <li>
+                <img class="bzoom_thumb_image" src="img/fancybox/5_b.jpg" />
+                <img class="bzoom_big_image" src="img/fancybox/5_b.jpg" />
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="img/fancybox/2_b.jpg" />
+                <img class="bzoom_big_image" src="img/fancybox/2_b.jpg" />
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="img/fancybox/4_b.jpg" />
+                <img class="bzoom_big_image" src="img/fancybox/4_b.jpg" />
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="img/fancybox/1_b.jpg" />
+                <img class="bzoom_big_image" src="img/fancybox/1_b.jpg" />
+            </li>
+        </ul>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
+        });
+        $(window).on('load', function() {
+            $('#slider').nivoSlider();
+        });
+        $("#jbzoom").zoom({
+            zoom_area_width: 300,
+            autoplay_interval: 300,
+            small_thumbs: 4,
+            autoplay: false
+        });
+    </script>
+</body>
+
+</html>
