@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check</title>
+	<script type="text/javascript " src="jquery-1.8.3.js"></script>
+</head>
+<body>
+
+	<form style="background-color: grey; width: 20%; margin: 5% auto;">
+		<ul class="nested" id="nested">
+		    <li>
+		        <input type="checkbox" name="" value="1"> One
+		        <ul>
+		        	<li><input type="checkbox" name="" value="1"> Child 1 of One </li>
+		            <li><input type="checkbox" name="" value="1"> Child 2 of One</li>
+		            <li><input type="checkbox" name="" value="1"> Child 3 of One</li>
+		        </ul>
+		    </li>
+		    <li>
+		        <input type="checkbox" name="" value="1"> Two
+		        <ul>
+		        	<li><input type="checkbox" name="" value="1"> Child 1 of One </li>
+		            <li><input type="checkbox" name="" value="1"> Child 2 of One</li>
+		            <li><input type="checkbox" name="" value="1"> Child 3 of One</li>
+		        </ul>
+		    </li>
+		    <li>
+		        <input type="checkbox" name="" value="1"> Three
+		        <ul>
+		        	<li><input type="checkbox" name="" value="1"> Child 1 of One </li>
+		            <li><input type="checkbox" name="" value="1"> Child 2 of One</li>
+		            <li><input type="checkbox" name="" value="1"> Child 3 of One</li>
+		        </ul>
+		    </li>
+
+		    	
+</ul>
+	</form>
+
+</body>
+<script type="text/javascript">
+	$('.nested input[type=checkbox]').click(function () {
+    $(this).parent().find('li input[type=checkbox]').prop('checked', $(this).is(':checked'));
+    var sibs = false;
+    $(this).closest('ul').children('li').each(function () {
+        if($('input[type=checkbox]', this).is(':checked')) sibs=true;
+    })
+    $(this).parents('ul').prev().prop('checked', sibs);
+});
+</script>
+</html>
