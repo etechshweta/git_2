@@ -1,0 +1,103 @@
+
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    span{
+    margin-left: 25%;
+    }
+    .formg{
+    display: flex;
+    margin-top: 25px;
+    }
+    .acc{
+    color: #b9ad90;
+    text-align: center;
+    font-size: 15px;
+      
+    }
+    form{
+    padding: 20px 20px;
+    width: 420px;
+    margin: 0 auto;
+    }
+    .forms{
+    border-radius: 0px;
+    border: none;
+    width: 100%;
+    color: #f4f4f5;
+    outline: none;
+    border-bottom: 1px solid #a9a4a4;
+    background: transparent;
+    box-shadow: none;
+        margin-bottom: 25px;
+    }
+    .cardd{
+    background-color: transparent;
+    border: none
+    width: 420px;
+    border: none;
+    margin: 0 auto;
+    }
+    .card-body{
+     width: 100%;
+    }
+    .material-icons{
+      font-size: 35px;
+      color: #b4bcc3;
+    }
+    .icon{
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 10px;
+    }
+    fieldset{
+     margin-top: 80px;
+    }
+    .card{
+    display: flex;
+    }
+    span{
+    color: #bce0e0;
+    }
+    img{
+    margin-top: 50px;
+    margin: 20px 50px;
+    height: 100px;
+    width: 150px;
+    }
+    .content{
+    margin: 0 auto;
+    }
+    .button{
+    color: #fff;
+    width: 100%;
+    height: 35px;
+    border-radius: 25px;
+    background-color: #c12760;
+    border: none;
+    outline:none;
+
+    }
+    .button:hover {
+    color: #fff;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #c12760;
+    border: none;
+    cursor: pointer;
+        
+    }.button:hover {
+    text-decoration: none;
+    }
+   
+
+    @media only screen and  (max-width: 420px){
+      body {
+        width: 100%;
+      }
+      form{
+        max-width: 100%;
+      }
+    }
