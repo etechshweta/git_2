@@ -1,6 +1,20 @@
-.formg{
+
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .formg{
     display: flex;
-    margin-bottom: 35px;
+    }
+    .acc{
+    color: white;
+    text-align: center;
+    }
+    form{
+    padding: 20px 20px;
+    width: 420px;
+    margin: 0 auto;
     }
     .forms{
     border-radius: 0px;
@@ -12,9 +26,13 @@
     box-shadow: none;
         margin-bottom: 25px;
     }
-    .card{
-    background-image: url(background.png);
-    background-repeat: no-repeat;
+    .cardd{
+    background-color: transparent;
+    height: 150vh;
+    border: none
+    width: 420px;
+    border: none;
+    margin: 0 auto;
     }
     .card-body{
      width: 100%;
@@ -44,7 +62,6 @@
     width: 150px;
     }
     .content{
-    width: 50%;
     margin: 0 auto;
     }
     .btn btn-lg btn-success btn-block{
@@ -52,9 +69,11 @@
 
     }
 
-    @media only screen and  (max-width: 600px){
-      .content{
+    @media only screen and  (max-width: 420px){
+      body {
         width: 100%;
       }
+      form{
+        max-width: 100%;
       }
     }
