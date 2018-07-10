@@ -1,0 +1,77 @@
+
+body{
+	background-image: url(circle.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+	}
+	.canvasjs-chart-credit{
+		display: none;
+        background:transparent;
+	}
+	#card{
+	margin: 0 auto;
+	width: 18rem;
+	height: 100vh;   
+    background: transparent;
+    border: none;
+	}
+.card-title{
+	background-color: #bf87e8;
+	height: 12vh;
+    margin-bottom: 5rem;
+
+}
+.card-body {
+    padding: 0;
+}
+.Overr{
+	font-size: 20px;
+    vertical-align: text-bottom;
+    display: inline-block;
+    color: white;
+    margin-left: 65px;
+}
+
+.card-title i {
+	font-size: 25px;
+	margin-top: 10px;
+}
+.card-title .material-icons{
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+}
+.list-group-item i{
+	vertical-align: bottom;
+    font-size: 18px;
+}
+
+.list-group{
+	margin-top: 30px;
+}
+.list-group-flush {
+    
+    background: transparent;
+    font-size: 12px;
+    border-top: none;
+    color: antiquewhite;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.smalll{
+	display: inline-block;
+    margin-left: 100px;
+}
+.add{
+	margin: 0 auto;
+    color: #bf87e8;
+}
+.add i{
+	font-size: 50px;
+}
+.
+.list-group-item{
+    background: transparent;
+}
