@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url(fonts/AvenirLTStd-Book.otf);
+    src: url(fonts/AvenirLTStd-Medium.otf);
+    src: url(fonts/AvenirLTStd-Roman.otf);
+}
+
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+body {
+    font-family: 'Avenir';
+}
+
+.list-container-mobile {
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    background-color: #c78ef2;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 420px;
+    display: inline-block
+}
+
+.material-icons {
+    font-size: 31px;
+}
+
+.liststyle {
+    padding-top: 20px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.auto {
+    float: center;
+    color: #eee;
+    font-size: 22px;
+    margin-left: 117px;
+}
+
+.content {
+    border-bottom: 1px solid#eee;
+    padding: 22px;
+}
+
+.footer {
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 420px;
+    background: white;
+}
+
+.data [type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.footer a i {
+    background-color: #c78ef2;
+    font-size: 54px;
+    vertical-align: middle;
+    color: white;
+    border-radius: 100%;
+}
+
+.header a i {
+    color: white;
+    float: left;
+    margin-left: 10px;
+    font-size: 35px;
+}
+
+.icon2 {
+    color: #eee;
+    margin-left: 20px;
+    float: right;
+    font-size: 18px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.icon2 i {
+    font-size: 32px;
+}
+
+.fileopen {
+    text-align: center;
+}
+
+.liststyle li span.box {
+    font-size: 15px;
+}
+
+#myModal {
+    background: none;
+    box-shadow: none;
+}
+
+@media (max-width: 425px) {
+    .header,
+    .footer {
+        width: 100%;
+    }
+}

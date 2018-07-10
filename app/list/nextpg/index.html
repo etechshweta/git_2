@@ -1,0 +1,90 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="css/circle.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+    
+    <title>circle</title>
+  </head>
+  <body>
+      <div class="container">
+          <div class="card" id="card">
+              <div class="card-title"><i class="material-icons">menu</i> 
+                  <div class="Overr">Overview</div>
+               </div>
+               <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+               <div class="card-body" style="padding: 0;"> 
+                     <ul class="list-group list-group-flush"></ul>                
+               </div>
+               <div class="add"><i class="material-icons">add_circle</i>            
+               </div>   
+          </div>   
+      </div>   
+<script type="text/javascript">
+window.onload = function() { 
+
+ var retrievedObject = localStorage.getItem('username');
+  var dataPoints = [];
+          var options =  {
+            animationEnabled: true,
+            theme: "light2",
+                backgroundColor: "#5d5f63",
+            title: {
+              text: " "
+            },
+            data: [{
+              type: "doughnut", 
+              dataPoints: dataPoints
+            }]
+          };
+
+ function addData(data) {
+     for (var i = 0; i < data.length; i++) {
+      var user = JSON.stringify(data[i].username);
+      if(retrievedObject==user){
+            var sum=0;
+          $.each(data[i].task,function(j,data){
+            sum +=parseInt(data.status) ;
+           });           
+          $.each(data[i].task,function(j,data){
+                  var percent=(parseInt(data.status)/sum*100).toFixed(2);
+                var output = "<li class='list-group-item'>"+
+                        "<div class='c100 p100' id='chart1'>"+
+                             "<div class='slice'>"+
+                                "<div class='bar'></div>"+
+                                "<div class='fill'></div>"+
+                            "</div>"+
+                         "</div>"                        
+                         +data.taskname+
+                          "<div class='smalll' id='percent'>"+
+                          "<small>" +data.status+ "&nbsp;&nbsp;&nbsp;&nbsp;"+percent+"</small>"+
+                        "</li>"
+        $(".card-body").append(output);
+                dataPoints.push({
+                y: data.status
+              });
+          })
+        }
+      }
+  $("#chartContainer").CanvasJSChart(options);
+  $('#percent').CanvasJSChart();
+}
+$.getJSON("task.json", addData);
+}
+</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  </body>
+</html>
